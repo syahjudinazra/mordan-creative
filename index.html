@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mordan Creative</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Brush+Script+MT&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/brushstrike" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            padding: 1.5rem 0;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .navbar-nav {
+            margin-left: auto;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            font-size: 1rem;
+            margin: 0 1.5rem;
+            padding: 0.5rem 0 !important;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #FFA500 !important;
+        }
+        
+        .nav-link.active {
+            color: #FFA500 !important;
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #FFA500;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+            position: relative;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 165, 0, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(255, 165, 0, 0.05) 0%, transparent 50%);
+        }
+        
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 700;
+            color: #FFA500;
+            letter-spacing: -2px;
+            text-align: center;
+        }
+        
+        .hero-subtitle-wrapper {
+            position: relative;
+        }
+        
+        .more-text {
+            font-size: 6rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            margin-left: 9rem;
+        }
+
+        .more-text-2 {
+            font-size: 6rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            margin-right: 9rem;
+        }
+        
+        .brushstrike-text {
+            font-family: 'cyber brush';
+            font-size: 5rem;
+            font-weight: normal;
+            color: #FFA500;
+            position: absolute;
+            z-index: 2;
+            font-style: italic;
+        }
+
+        .brushstrike-thiness {
+            font-family: 'cyber brush';
+            font-weight: normal;
+            color: #FFA500;
+            position: absolute;
+            z-index: 2;
+            font-style: italic;
+            margin-left: 11rem;
+        }
+
+        .active-text {
+            left: 0;
+            transform: rotate(-5deg);
+        }
+        
+        .creative-text {
+            top: 50px;
+            right: -50px;
+            transform: rotate(-3deg);
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            max-width: 450px;
+            margin-bottom: 2rem;
+            color: #ddd;
+        }
+        
+        .cta-button {
+            background: #FFA500;
+            color: #000;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 165, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #FF8C00;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 165, 0, 0.5);
+        }
+        
+        /* Core Values Section */
+        .core-values-section {
+            min-height: 100vh;
+            padding: 10px 0 100px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            text-align: right;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .values-grid {
+            position: relative;
+        }
+        
+        .value-item {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .value-text-orange {
+            color: #FFA500;
+        }
+        
+        .value-text-white {
+            color: #fff;
+        }
+        
+        .value-text-outline {
+            color: transparent;
+            -webkit-text-stroke: 2px #fff;
+            text-stroke: 2px #fff;
+        }
+        
+        .value-brushstrike {
+            font-family: 'cyber brush', cursive;
+            color: #FFA500;
+            font-style: italic;
+            font-weight: normal;
+        }
+        
+        .core-image-wrapper {
+            position: absolute;
+            margin-left: 23rem;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 500px;
+            z-index: 1;
+        }
+        
+        .core-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .values-left {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .values-right {
+            position: relative;
+            z-index: 2;
+            text-align: right;
+        }
+        
+        .value-item.adaptability {
+            text-align: left;
+        }
+        
+        .value-item.equality {
+            text-align: left;
+            margin-left: 11rem;
+        }
+        
+        .value-item.visioner {
+            text-align: left;
+            margin-top: 8rem;
+            margin-left: 15rem;
+        }
+
+        .value-item.visioner span {
+            display: inline-block;
+        }
+
+        .value-item.visioner span:last-child {
+            position: relative;
+            font-size: 0; 
+            width: 0;
+        }
+
+        .value-item.visioner span:last-child::after {
+            content: "";
+            display: inline-block;
+            width: 70px;
+            height: 6px;
+            background: #fff;
+            margin-left: 10px;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        
+        .value-item.creative {
+            text-align: right;
+            margin-right: 8rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item.tive {
+            text-align: left;
+            margin-top: 5rem;
+            margin-left: -11rem;
+            font-size: 5rem;
+        }
+        
+        .value-item.trust {
+            text-align: right;
+            margin-top: 1rem;
+        }
+        
+        .value-item.innovative {
+            text-align: left;
+            margin-left: -7rem;
+            margin-top: 6rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 5rem;
+            }
+            .more-text {
+                font-size: 4.5rem;
+            }
+            .more-text-2 {
+                font-size: 4.5rem;
+            }
+            .brushstrike-text {
+                font-size: 5rem;
+            }
+            .value-item {
+                font-size: 3rem;
+            }
+            .core-image-wrapper {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .core-image-wrapper {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                margin: 3rem auto;
+                width: 350px;
+                height: 350px;
+            }
+            .value-item {
+                text-align: center !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                font-size: 2.5rem;
+            }
+            .values-right {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            .more-text {
+                font-size: 3rem;
+                margin-left: 2rem;
+            }
+            .more-text-2 {
+                font-size: 3rem;
+                margin-right: 2rem;
+            }
+            .brushstrike-text {
+                font-size: 3.5rem;
+            }
+            .creative-text {
+                right: -20px;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .nav-link {
+                margin: 0.5rem 0;
+            }
+            .value-item {
+                font-size: 2rem;
+            }
+            .core-image-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .more-text {
+                font-size: 2rem;
+                margin-left: 1rem;
+            }
+            .more-text-2 {
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+            .brushstrike-text {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Services Section */
+        .services-section {
+            min-height: 100vh;
+            padding: 100px 0;
+            position: relative;
+            background: #FFA500;
+            overflow: hidden;
+        }
+        
+        .service-bg-text {
+            position: absolute;
+            font-size: 12rem;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 3px rgba(0, 0, 0, 0.15);
+            text-stroke: 3px rgba(0, 0, 0, 0.15);
+            letter-spacing: -5px;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 1;
+        }
+        
+        .service-bg-text.top {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .service-bg-text.bottom {
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .services-carousel-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 50px 0;
+        }
+        
+        .service-card {
+            background: #000;
+            border-radius: 15px;
+            padding: 3rem 2.5rem;
+            margin: 0 15px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #FFA500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .service-subtitle {
+            font-family: 'cyber brush', cursive;
+            font-size: 2.5rem;
+            color: #FFA500;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        
+        .service-description {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #fff;
+            flex-grow: 1;
+        }
+        
+        /* Carousel Controls */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: none;
+            opacity: 1;
+            z-index: 3;
+        }
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-control-prev-icon::before {
+            content: '<';
+            color: #FFA500;
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        .carousel-control-next-icon::before {
+            content: '>';
+            color: #FFA500;
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        .carousel-control-prev {
+            left: -80px;
+        }
+        
+        .carousel-control-next {
+            right: -80px;
+        }
+        
+        .carousel-indicators {
+            bottom: -50px;
+        }
+        
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            margin: 0 5px;
+        }
+        
+        .carousel-indicators button.active {
+            background-color: #000;
+        }
+        
+        @media (max-width: 1400px) {
+            .carousel-control-prev {
+                left: 10px;
+            }
+            .carousel-control-next {
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .service-bg-text {
+                font-size: 8rem;
+            }
+            .service-card {
+                margin: 0 10px;
+                min-height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service-bg-text {
+                font-size: 5rem;
+            }
+            .service-title {
+                font-size: 2rem;
+            }
+            .service-subtitle {
+                font-size: 2rem;
+            }
+            .service-card {
+                min-height: 400px;
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        /* Client Stats Section */
+        .client-stats-section {
+            padding: 100px 0;
+            background: #000;
+            position: relative;
+        }
+        
+        .stats-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .stats-hashtag {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+        
+        .stats-description {
+            font-size: 1.25rem;
+            color: #fff;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            line-height: 1.8;
+        }
+        
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #FFA500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.25rem;
+            color: #FFA500;
+            font-weight: 400;
+        }
+        
+        /* Work Section */
+        .work-section-title {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+        }
+        
+        .work-carousel-wrapper {
+            position: relative;
+            padding: 0 100px;
+        }
+        
+        .work-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 0 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 165, 0, 0.3);
+        }
+        
+        .work-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        .work-info {
+            padding: 2rem;
+            background: #fff;
+        }
+        
+        .work-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .work-category {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        /* Work Carousel Controls */
+        #workCarousel .carousel-control-prev,
+        #workCarousel .carousel-control-next {
+            width: 70px;
+            height: 70px;
+            background: transparent;
+            border: none;
+            opacity: 1;
+        }
+        
+        #workCarousel .carousel-control-prev-icon,
+        #workCarousel .carousel-control-next-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #FFA500;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: none;
+        }
+        
+        #workCarousel .carousel-control-prev-icon::before {
+            content: '<';
+            color: #000;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        #workCarousel .carousel-control-next-icon::before {
+            content: '>';
+            color: #000;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        #workCarousel .carousel-control-prev {
+            left: -100px;
+        }
+        
+        #workCarousel .carousel-control-next {
+            right: -100px;
+        }
+        
+        @media (max-width: 1400px) {
+            .work-carousel-wrapper {
+                padding: 0 50px;
+            }
+            #workCarousel .carousel-control-prev {
+                left: -50px;
+            }
+            #workCarousel .carousel-control-next {
+                right: -50px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .stats-hashtag {
+                font-size: 2.5rem;
+            }
+            .stat-number {
+                font-size: 3.5rem;
+            }
+            .work-section-title {
+                font-size: 3rem;
+            }
+            .work-carousel-wrapper {
+                padding: 0 20px;
+            }
+            #workCarousel .carousel-control-prev {
+                left: -20px;
+            }
+            #workCarousel .carousel-control-next {
+                right: -20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-hashtag {
+                font-size: 2rem;
+            }
+            .stats-description {
+                font-size: 1rem;
+            }
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            .stat-label {
+                font-size: 1rem;
+            }
+            .work-section-title {
+                font-size: 2rem;
+            }
+            .work-image {
+                height: 250px;
+            }
+            #workCarousel .carousel-control-prev-icon,
+            #workCarousel .carousel-control-next-icon {
+                width: 50px;
+                height: 50px;
+            }
+            #workCarousel .carousel-control-prev-icon::before,
+            #workCarousel .carousel-control-next-icon::before {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Partner Section */
+        .partner-section {
+            padding: 100px 0;
+            background: #FFA500;
+            position: relative;
+        }
+        
+        .partner-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .partner-main-heading {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #000;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .partner-subtitle {
+            font-size: 1.5rem;
+            color: #000;
+            text-align: center;
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+        
+        .partner-logos {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 3rem 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .partner-logo {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            transform: scale(1.1);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: brightness(0);
+        }
+        
+        @media (max-width: 1200px) {
+            .partner-logos {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2.5rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .partner-title {
+                font-size: 2.5rem;
+            }
+            .partner-main-heading {
+                font-size: 2rem;
+            }
+            .partner-subtitle {
+                font-size: 1.2rem;
+            }
+            .partner-logos {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem 1rem;
+            }
+            .partner-logo {
+                width: 100px;
+                height: 80px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .partner-logos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Articles Section */
+        .articles-section {
+            padding: 100px 0;
+            background: #000;
+            position: relative;
+        }
+        
+        .articles-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #FFA500;
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+        }
+        
+        .articles-carousel-wrapper {
+            position: relative;
+            padding: 0 100px;
+        }
+        
+        .article-card {
+            background: #FFA500;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 0 15px;
+            min-height: 300px;
+            position: relative;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .article-title-text {
+            font-family: 'cyber brush', cursive;
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 2rem;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+        
+        .article-description {
+            font-size: 0.9rem;
+            color: #000;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .article-expand {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            color: #000;
+        }
+        
+        /* Article Carousel Controls */
+        #articlesCarousel .carousel-control-prev,
+        #articlesCarousel .carousel-control-next {
+            width: 70px;
+            height: 70px;
+            background: transparent;
+            border: none;
+            opacity: 1;
+        }
+        
+        #articlesCarousel .carousel-control-prev-icon,
+        #articlesCarousel .carousel-control-next-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #FFA500;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: none;
+        }
+        
+        #articlesCarousel .carousel-control-prev-icon::before {
+            content: '<';
+            color: #000;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        #articlesCarousel .carousel-control-next-icon::before {
+            content: '>';
+            color: #000;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        #articlesCarousel .carousel-control-prev {
+            left: -100px;
+        }
+        
+        #articlesCarousel .carousel-control-next {
+            right: -100px;
+        }
+        
+        /* Footer Section */
+        .footer-section {
+            padding: 80px 0 30px;
+            background: #000;
+            color: #fff;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #FFA500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFA500;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: #FFA500;
+            color: #000;
+            transform: translateY(-5px);
+        }
+        
+        .footer-contact-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-address-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-address {
+            font-size: 1rem;
+            color: #ddd;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-office-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-contact-info {
+            font-size: 1rem;
+            color: #ddd;
+            line-height: 1.8;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 1400px) {
+            .articles-carousel-wrapper {
+                padding: 0 50px;
+            }
+            #articlesCarousel .carousel-control-prev {
+                left: -50px;
+            }
+            #articlesCarousel .carousel-control-next {
+                right: -50px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .articles-title {
+                font-size: 2.5rem;
+            }
+            .article-title-text {
+                font-size: 2rem;
+            }
+            .articles-carousel-wrapper {
+                padding: 0 20px;
+            }
+            #articlesCarousel .carousel-control-prev {
+                left: -20px;
+            }
+            #articlesCarousel .carousel-control-next {
+                right: -20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .articles-title {
+                font-size: 2rem;
+            }
+            .article-title-text {
+                font-size: 1.5rem;
+            }
+            .article-description {
+                font-size: 0.8rem;
+            }
+            #articlesCarousel .carousel-control-prev-icon,
+            #articlesCarousel .carousel-control-next-icon {
+                width: 50px;
+                height: 50px;
+            }
+            #articlesCarousel .carousel-control-prev-icon::before,
+            #articlesCarousel .carousel-control-next-icon::before {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-aos="fade-right">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='45' font-family='Montserrat, sans-serif' font-size='24' font-weight='900' fill='%23FFA500'%3EMORDAN%3C/text%3E%3Ctext x='10' y='58' font-family='Montserrat, sans-serif' font-size='10' font-weight='400' fill='%23FFA500' letter-spacing='3'%3ECREATIVE%3C/text%3E%3C/svg%3E" alt="Mordan Creative">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" data-aos="fade-left">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">SERVICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="text-center">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+                            MORDAN CREATIVE
+                        </h1>
+                    </div>
+                    
+                    <div class="hero-subtitle-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="more-text">
+                            MORE
+                            <span class="brushstrike-text active-text" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">ACTIVE</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-subtitle-wrapper text-end mr-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="more-text-2">
+                            MORE
+                            <span class="brushstrike-text active-text" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">CREATIVE</span>
+                        </div>
+                    </div>
+                    
+                    <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        We help brands become more than just a name - through bold strategy, powerful content, and impactful storytelling.
+                    </p>
+                    
+                    <button class="cta-button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        Let's work together
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values-section" id="values">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title" data-aos="fade-left">
+                        <h2>CORE VALUE<br>MORDAN</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row values-grid">
+                <div class="col-lg-6 values-left">
+                    <div class="value-item adaptability" data-aos="fade-right" data-aos-delay="100">
+                        <span class="value-text-orange">ADAPTABI</span><span class="value-text-white">LITY</span>
+                    </div>
+                    <div class="value-item equality" data-aos="fade-right" data-aos-delay="200">
+                        <span class="value-text-white">EQUA</span><span class="value-text-orange">LITY</span>
+                    </div>
+                    <div class="value-item visioner" data-aos="fade-right" data-aos-delay="300">
+                        <span class="value-text-white">VISIO</span><br />
+                        <span class="value-text-white">NER</span>
+                        <span class="value-text-white">--</span>
+                    </div>
+                </div>
+                
+                <div class="core-image-wrapper" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=800&fit=crop" alt="Core Values" class="core-image">
+                </div>
+                
+                <div class="col-lg-6 values-right">
+                    <div class="value-item creative" data-aos="fade-left" data-aos-delay="100">
+                        <span class="value-text-white">CR</span><span class="value-text-orange">EATIVE</span>
+                    </div>
+                    <div class="value-item tive" data-aos="fade-left" data-aos-delay="200">
+                        <span class="value-text-outline">ACTIVE</span>
+                    </div>
+                    <div class="value-item trust" data-aos="fade-left" data-aos-delay="300">
+                        <span class="value-text-white">TRUSTWOR</span>
+                        <span class="brushstrike-thiness active-text" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">THINESS</span>
+
+                    </div>
+                    <div class="value-item innovative" data-aos="fade-left" data-aos-delay="400">
+                        <span class="value-text-orange">INNO</span><br />
+                        <span class="value-text-white">VATIVE</span><span class="value-text-white">.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="service">
+        <div class="service-bg-text top">SERVICE</div>
+        <div class="service-bg-text bottom">SERVICE</div>
+        
+        <div class="container">
+            <div class="services-carousel-wrapper">
+                <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"></button>
+                    </div>
+                    
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                                    <div class="service-card">
+                                        <h3 class="service-title">SOCIAL<br>MEDIA</h3>
+                                        <h4 class="service-subtitle">management</h4>
+                                        <p class="service-description">
+                                            OUR SOCIAL MEDIA MANAGEMENT PACKAGES HELP BUSINESSES BUILD A STRONG ONLINE PRESENCE, CONNECT WITH THE RIGHT AUDIENCE, AND DRIVE MEASURABLE RESULTS. FROM STRATEGY TO CONTENT PRODUCTION, COMMUNITY ENGAGEMENT, AND PERFORMANCE ANALYSIS, WE PROVIDE END-TO-END SOLUTIONS THAT MAKE YOUR BRAND STAND OUT ON PLATFORMS LIKE INSTAGRAM, TIKTOK, LINKEDIN, AND MORE.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="service-card">
+                                        <h3 class="service-title">CREATIVE</h3>
+                                        <h4 class="service-subtitle">production</h4>
+                                        <p class="service-description">
+                                            OUR CREATIVE PRODUCTION SERVICES HELP BRANDS TELL THEIR STORIES THROUGH POWERFUL VISUALS AND ENGAGING CONTENT. FROM CONCEPT DEVELOPMENT AND DESIGN TO VIDEO, PHOTOGRAPHY, AND MOTION GRAPHICS, WE DELIVER HIGH-QUALITY CREATIVE ASSETS THAT CONNECT WITH YOUR AUDIENCE ACROSS DIGITAL AND TRADITIONAL PLATFORMS. WHETHER YOU NEED A ONE-TIME CAMPAIGN OR ONGOING CONTENT PRODUCTION, OUR TEAM IS HERE TO BRING IT TO LIFE.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="service-card">
+                                        <h3 class="service-title">BRANDING</h3>
+                                        <p class="service-description">
+                                            OUR BRANDING SERVICES HELP BUSINESSES CREATE A POWERFUL AND MEMORABLE IDENTITY. FROM BRAND STRATEGY AND MESSAGING TO LOGO DESIGN, TYPOGRAPHY, AND VISUAL GUIDELINES, WE BUILD COHESIVE BRAND SYSTEMS THAT CONNECT WITH YOUR AUDIENCE AND SET YOU APART FROM THE COMPETITION. WHETHER YOU'RE LAUNCHING A NEW BUSINESS OR REFRESHING AN EXISTING IDENTITY, OUR CREATIVE TEAM DELIVERS BRANDING SOLUTIONS THAT INSPIRE TRUST AND DRIVE RECOGNITION.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 - Add more services here -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                                    <div class="service-card">
+                                        <h3 class="service-title">DIGITAL<br>MARKETING</h3>
+                                        <h4 class="service-subtitle">strategy</h4>
+                                        <p class="service-description">
+                                            WE CREATE COMPREHENSIVE DIGITAL MARKETING STRATEGIES THAT DRIVE RESULTS. FROM SEO AND SEM TO EMAIL MARKETING AND PAID ADVERTISING, WE HELP YOUR BRAND REACH THE RIGHT AUDIENCE AT THE RIGHT TIME. OUR DATA-DRIVEN APPROACH ENSURES MAXIMUM ROI AND SUSTAINABLE GROWTH FOR YOUR BUSINESS.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="service-card">
+                                        <h3 class="service-title">WEB<br>DESIGN</h3>
+                                        <h4 class="service-subtitle">development</h4>
+                                        <p class="service-description">
+                                            OUR WEB DESIGN AND DEVELOPMENT SERVICES CREATE STUNNING, USER-FRIENDLY WEBSITES THAT CONVERT VISITORS INTO CUSTOMERS. WE COMBINE BEAUTIFUL DESIGN WITH POWERFUL FUNCTIONALITY TO DELIVER WEBSITES THAT NOT ONLY LOOK GREAT BUT ALSO PERFORM EXCEPTIONALLY ACROSS ALL DEVICES.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="service-card">
+                                        <h3 class="service-title">CONTENT</h3>
+                                        <h4 class="service-subtitle">creation</h4>
+                                        <p class="service-description">
+                                            WE PRODUCE ENGAGING CONTENT THAT RESONATES WITH YOUR AUDIENCE. FROM BLOG POSTS AND ARTICLES TO INFOGRAPHICS AND VIDEO SCRIPTS, OUR CONTENT CREATION SERVICES HELP YOU TELL YOUR BRAND STORY IN A COMPELLING WAY THAT DRIVES ENGAGEMENT AND BUILDS LASTING CONNECTIONS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 - Add more services here -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                                    <div class="service-card">
+                                        <h3 class="service-title">INFLUENCER</h3>
+                                        <h4 class="service-subtitle">marketing</h4>
+                                        <p class="service-description">
+                                            WE CONNECT YOUR BRAND WITH THE RIGHT INFLUENCERS TO AMPLIFY YOUR MESSAGE AND REACH NEW AUDIENCES. OUR INFLUENCER MARKETING CAMPAIGNS ARE STRATEGICALLY DESIGNED TO CREATE AUTHENTIC CONNECTIONS AND DRIVE MEANINGFUL RESULTS FOR YOUR BUSINESS.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="service-card">
+                                        <h3 class="service-title">ANALYTICS &</h3>
+                                        <h4 class="service-subtitle">reporting</h4>
+                                        <p class="service-description">
+                                            OUR ANALYTICS AND REPORTING SERVICES PROVIDE DEEP INSIGHTS INTO YOUR MARKETING PERFORMANCE. WE TRACK KEY METRICS, ANALYZE DATA, AND DELIVER ACTIONABLE RECOMMENDATIONS THAT HELP YOU MAKE INFORMED DECISIONS AND OPTIMIZE YOUR MARKETING STRATEGIES.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="service-card">
+                                        <h3 class="service-title">CONSULTING</h3>
+                                        <h4 class="service-subtitle">services</h4>
+                                        <p class="service-description">
+                                            OUR CONSULTING SERVICES PROVIDE EXPERT GUIDANCE TO HELP YOUR BUSINESS NAVIGATE THE DIGITAL LANDSCAPE. FROM BRAND POSITIONING TO MARKETING STRATEGY AND DIGITAL TRANSFORMATION, WE OFFER CUSTOMIZED SOLUTIONS THAT DRIVE GROWTH AND SUCCESS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Stats & Work Section -->
+    <section class="client-stats-section" id="work">
+        <div class="container">
+            <!-- Stats Header -->
+            <div class="stats-header">
+                <h2 class="stats-hashtag" data-aos="fade-up">#MakeYouGrow</h2>
+                <p class="stats-description" data-aos="fade-up" data-aos-delay="100">
+                    We are here to start the journey of business decisions or brands up to the world through a completely new, sometimes unknown and risky road.
+                </p>
+            </div>
+            
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years of experience</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number">95+</div>
+                    <div class="stat-label">Client</div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Content made</div>
+                </div>
+            </div>
+            
+            <!-- Work Title -->
+            <h3 class="work-section-title" data-aos="fade-up">WORK</h3>
+            
+            <!-- Work Carousel -->
+            <div class="work-carousel-wrapper">
+                <div id="workCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=350&fit=crop" alt="Pondok 47" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Pondok 47</h4>
+                                            <p class="work-category">Social Media Management (IG & TikTok)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=350&fit=crop" alt="Barista Corner" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Barista Corner</h4>
+                                            <p class="work-category">Website Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=350&fit=crop" alt="Obsession" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Obsession</h4>
+                                            <p class="work-category">Branding</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=350&fit=crop" alt="Tunas Muda School" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Tunas Muda School</h4>
+                                            <p class="work-category">Production Video & Animasi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=350&fit=crop" alt="Tech Startup" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Tech Startup</h4>
+                                            <p class="work-category">Digital Marketing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=350&fit=crop" alt="Fashion Brand" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Fashion Brand</h4>
+                                            <p class="work-category">Creative Production</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400&h=350&fit=crop" alt="Restaurant" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Restaurant</h4>
+                                            <p class="work-category">Content Strategy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=350&fit=crop" alt="Corporate" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Corporate</h4>
+                                            <p class="work-category">Brand Identity</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=350&fit=crop" alt="E-commerce" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">E-commerce</h4>
+                                            <p class="work-category">Web Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?w=400&h=350&fit=crop" alt="Fitness Center" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Fitness Center</h4>
+                                            <p class="work-category">Social Media Campaign</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=350&fit=crop" alt="Consulting Firm" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Consulting Firm</h4>
+                                            <p class="work-category">Brand Strategy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="work-card">
+                                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=350&fit=crop" alt="Healthcare" class="work-image">
+                                        <div class="work-info">
+                                            <h4 class="work-title">Healthcare</h4>
+                                            <p class="work-category">Video Production</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#workCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#workCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section class="partner-section" id="partner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="partner-title" data-aos="fade-right">PARTNER</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="partner-main-heading" data-aos="fade-up">WE WORK WITH THESE COMPANIES</h3>
+                    <p class="partner-subtitle" data-aos="fade-up" data-aos-delay="100">We don't work for brands, we grow with them</p>
+                </div>
+            </div>
+            
+            <div class="partner-logos" data-aos="fade-up" data-aos-delay="200">
+                <!-- Row 1 -->
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Parama Energi">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Obsession">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Telkomsel">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Bruen Coffee">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" alt="Shopee">
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Sky Luggage">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Boho Coffee">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732243.png" alt="Simpelin">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111419.png" alt="47 Barbershop">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111450.png" alt="Aksa Mandiri Pool">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="350">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Pondok 47">
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111499.png" alt="Peel Good">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Kopine Biyunge">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732228.png" alt="Sahara">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="Agora Building Materials">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732244.png" alt="Tunas Muda School">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="350">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111505.png" alt="Barista Corner">
+                </div>
+                
+                <!-- Row 4 -->
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Universal People">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="OI Coffee & Eatery">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Quackey">
+                </div>
+                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Seantero Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="articles-title" data-aos="fade-right">ARTICLE</h2>
+                </div>
+            </div>
+            
+            <div class="articles-carousel-wrapper">
+                <div id="articlesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                                    <div class="article-card">
+                                        <h3 class="article-title-text">ARTICLE</h3>
+                                        <p class="article-description">
+                                            MORDAN CREATIVE AGENCY: MEMBANGUN BRANDING, MENGELOLA MEDIA SOSIAL, DAN PRODUKSI KREATIF SEJAK 2020
+                                            <br><br>
+                                            DIDIRIKAN PADA TAHUN 2020, MORDAN CREATIVE AGENCY HADIR SEBAGAI MITRA STRATEGIS BAGI BISNIS DAN BRAND YANG INGIN BERKEMBANG DI ERA DIGITAL
+                                        </p>
+                                        <span class="article-expand">˅</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="article-card">
+                                        <h3 class="article-title-text">ARTICLE</h3>
+                                        <p class="article-description">
+                                            KENAPA BISNIS ANDA BUTUH DIGITAL AGENCY UNTUK TUMBUH DI ERA DIGITAL?
+                                            <br><br>
+                                            DI ERA SERBA DIGITAL, KEBERADAAN ONLINE BUKAN LAGI PILIHAN, MELAINKAN KEBUTUHAN. NAMUN, HADIR HANYA DI MEDIA SOSIAL ATAU PUNYA LOGO SAJA TIDAK CUKUP. BRAND HARUS MAMPU TAMPIL KONSISTEN, KREATIF, DAN
+                                        </p>
+                                        <span class="article-expand">˅</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                                    <div class="article-card">
+                                        <h3 class="article-title-text">ARTICLE</h3>
+                                        <p class="article-description">
+                                            THE POWER OF VISUAL STORYTELLING IN MODERN BRANDING
+                                            <br><br>
+                                            IN TODAY'S FAST-PACED DIGITAL WORLD, CAPTURING ATTENTION IS HARDER THAN EVER. VISUAL STORYTELLING HAS BECOME THE KEY TO CONNECTING WITH AUDIENCES ON A DEEPER LEVEL
+                                        </p>
+                                        <span class="article-expand">˅</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="article-card">
+                                        <h3 class="article-title-text">ARTICLE</h3>
+                                        <p class="article-description">
+                                            HOW TO BUILD A STRONG SOCIAL MEDIA PRESENCE FOR YOUR BUSINESS
+                                            <br><br>
+                                            SOCIAL MEDIA IS NO LONGER JUST A PLATFORM FOR SHARING UPDATES. IT'S A POWERFUL TOOL FOR BUILDING BRAND AWARENESS, ENGAGING WITH CUSTOMERS, AND DRIVING SALES
+                                        </p>
+                                        <span class="article-expand">˅</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                                    <div class="article-card">
+                                        <h3 class="article-title-text">ARTICLE</h3>
+                                        <p class="article-description">
+                                            CREATIVE PRODUCTION: FROM CONCEPT TO REALITY
+                                            <br><br>
+                                            BRINGING IDEAS TO LIFE REQUIRES MORE THAN JUST CREATIVITY. IT DEMANDS STRATEGIC THINKING, TECHNICAL EXPERTISE, AND A DEEP UNDERSTANDING OF YOUR AUDIENCE
+                                        </p>
+                                        <span class="article-expand">˅</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="article-card">
+                                        <h3 class="article-title-text">ARTICLE</h3>
+                                        <p class="article-description">
+                                            THE FUTURE OF DIGITAL MARKETING: TRENDS TO WATCH
+                                            <br><br>
+                                            AS TECHNOLOGY CONTINUES TO EVOLVE, SO DOES THE DIGITAL MARKETING LANDSCAPE. STAYING AHEAD OF THE CURVE IS ESSENTIAL FOR BRANDS THAT WANT TO REMAIN COMPETITIVE
+                                        </p>
+                                        <span class="article-expand">˅</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#articlesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#articlesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="footer-logo">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='45' font-family='Montserrat, sans-serif' font-size='24' font-weight='900' fill='%23FFA500'%3EMORDAN%3C/text%3E%3Ctext x='10' y='58' font-family='Montserrat, sans-serif' font-size='10' font-weight='400' fill='%23FFA500' letter-spacing='3'%3ECREATIVE%3C/text%3E%3C/svg%3E" alt="Mordan Creative">
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i>📷</i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i>🎵</i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i>f</i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i>▶</i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-contact-title">Contact Us</h3>
+                    
+                    <div class="footer-info-block">
+                        <h4 class="footer-address-title">Address</h4>
+                        <p class="footer-address">
+                            Bogor<br>
+                            Jl.Tegar beriman, Jl. Utama Pd. Manggis, RT.001/RW.03 No. 72, Bojong Baru,<br>
+                            Kec. Bojonggede, Kab. Bogor, Jawa Barat 16920
+                        </p>
+                    </div>
+                    
+                    <div class="footer-info-block">
+                        <h4 class="footer-office-title">Mordan Creative Official</h4>
+                        <p class="footer-contact-info">
+                            Admin<br>
+                            +62 815-1001-0590<br>
+                            Mordancreative@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        © 2025 Mordan Creative. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            }
+        });
+        
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
