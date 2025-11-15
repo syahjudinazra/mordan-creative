@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mordan Creative</title>
     
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -396,11 +399,11 @@
                 font-size: 2.5rem;
             }
             .more-text {
-                font-size: 2rem;
+                font-size: 1rem;
                 margin-left: 1rem;
             }
             .more-text-2 {
-                font-size: 2rem;
+                font-size: 1rem;
                 margin-right: 1rem;
             }
             .brushstrike-text {
@@ -489,8 +492,6 @@
         /* Carousel Controls */
         .carousel-control-prev,
         .carousel-control-next {
-            width: 60px;
-            height: 60px;
             background: transparent;
             border: none;
             opacity: 1;
@@ -499,37 +500,35 @@
         
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            width: 60px;
             height: 60px;
-            background-color: #000;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
-        .carousel-control-prev-icon::before {
+
+         .carousel-control-prev-icon::before {
             content: '<';
-            color: #FFA500;
-            font-size: 3rem;
+            color: #000000;
+            font-size: 6rem;
             font-weight: 900;
             line-height: 1;
         }
         
         .carousel-control-next-icon::before {
             content: '>';
-            color: #FFA500;
-            font-size: 3rem;
+            color: #000000;
+            font-size: 6rem;
             font-weight: 900;
             line-height: 1;
         }
         
         .carousel-control-prev {
-            left: -80px;
+            left: -110px;
         }
         
         .carousel-control-next {
-            right: -80px;
+            right: -110px;
         }
         
         .carousel-indicators {
@@ -691,7 +690,6 @@
         #workCarousel .carousel-control-prev,
         #workCarousel .carousel-control-next {
             width: 70px;
-            height: 70px;
             background: transparent;
             border: none;
             opacity: 1;
@@ -700,8 +698,6 @@
         #workCarousel .carousel-control-prev-icon,
         #workCarousel .carousel-control-next-icon {
             width: 70px;
-            height: 70px;
-            background-color: #FFA500;
             border-radius: 0;
             display: flex;
             align-items: center;
@@ -711,16 +707,16 @@
         
         #workCarousel .carousel-control-prev-icon::before {
             content: '<';
-            color: #000;
-            font-size: 3.5rem;
+            color: #FFA500;
+            font-size: 6rem;
             font-weight: 900;
             line-height: 1;
         }
         
         #workCarousel .carousel-control-next-icon::before {
             content: '>';
-            color: #000;
-            font-size: 3.5rem;
+            color: #FFA500;
+            font-size: 6rem;
             font-weight: 900;
             line-height: 1;
         }
@@ -954,7 +950,6 @@
         #articlesCarousel .carousel-control-prev,
         #articlesCarousel .carousel-control-next {
             width: 70px;
-            height: 70px;
             background: transparent;
             border: none;
             opacity: 1;
@@ -963,8 +958,6 @@
         #articlesCarousel .carousel-control-prev-icon,
         #articlesCarousel .carousel-control-next-icon {
             width: 70px;
-            height: 70px;
-            background-color: #FFA500;
             border-radius: 0;
             display: flex;
             align-items: center;
@@ -974,16 +967,16 @@
         
         #articlesCarousel .carousel-control-prev-icon::before {
             content: '<';
-            color: #000;
-            font-size: 3.5rem;
+            color: #FFA500;
+            font-size: 5rem;
             font-weight: 900;
             line-height: 1;
         }
         
         #articlesCarousel .carousel-control-next-icon::before {
             content: '>';
-            color: #000;
-            font-size: 3.5rem;
+            color: #FFA500;
+            font-size: 5rem;
             font-weight: 900;
             line-height: 1;
         }
@@ -1017,7 +1010,7 @@
         .social-icon {
             width: 50px;
             height: 50px;
-            background: transparent;
+            background: #FFA500;
             border: 2px solid #FFA500;
             border-radius: 50%;
             display: flex;
@@ -1416,7 +1409,7 @@
                             <div class="row">
                                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
                                     <div class="work-card">
-                                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=350&fit=crop" alt="Pondok 47" class="work-image">
+                                        <img src="./assets/images/Pondok 47_Beverage-5.jpg" alt="Pondok 47" class="work-image">
                                         <div class="work-info">
                                             <h4 class="work-title">Pondok 47</h4>
                                             <p class="work-category">Social Media Management (IG & TikTok)</p>
@@ -1434,7 +1427,7 @@
                                 </div>
                                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                                     <div class="work-card">
-                                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=350&fit=crop" alt="Obsession" class="work-image">
+                                        <img src="./assets/images/obsession-brand.jpeg" alt="Obsession" class="work-image">
                                         <div class="work-info">
                                             <h4 class="work-title">Obsession</h4>
                                             <p class="work-category">Branding</p>
@@ -1570,73 +1563,56 @@
             <div class="partner-logos" data-aos="fade-up" data-aos-delay="200">
                 <!-- Row 1 -->
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Parama Energi">
+                    <img src="./assets/images/Shopee_logo.svg.png" alt="Shopee">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Obsession">
+                    <img src="./assets/images/Logo Obsession-02.png" alt="Obsession">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Telkomsel">
+                    <img src="./assets/images/TELKOMSEL_TELKOM_LOCKUP_BLACK_CMYK.png" alt="Telkomsel">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Bruen Coffee">
+                    <img src="./assets/images/logo bruen putih-01.png" alt="Bruen Coffee">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" alt="Shopee">
+                    <img src="./assets/images/Barista Corner Logo hitam.png" alt="Barista Corner">
                 </div>
                 
                 <!-- Row 2 -->
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Sky Luggage">
+                    <img src="./assets/images/logo aksa mandiri-02.png" alt="Aksa Mandiri Pool">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Boho Coffee">
+                    <img src="./assets/images/logo boho-04.png" alt="Boho Coffee">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732243.png" alt="Simpelin">
+                    <img src="./assets/images/simpelin.png" alt="Simpelin">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111419.png" alt="47 Barbershop">
+                    <img src="./assets/images/logo king 47 barbershop.png" alt="47 Barbershop">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111450.png" alt="Aksa Mandiri Pool">
+                    <img src="./assets/images/LOGO SEANTERO REV 2-03.png" alt="Seantero">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="350">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Pondok 47">
+                    <img src="./assets/images/LOGO QUACKEY FIX-03.png" alt="QUACKEY">
                 </div>
                 
                 <!-- Row 3 -->
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111499.png" alt="Peel Good">
+                    <img src="./assets/images/logo sahara 7.png" alt="Sahara">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Kopine Biyunge">
+                    <img src="./assets/images/tunas muda png.png" alt="Tunas Muda School">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732228.png" alt="Sahara">
+                    <img src="./assets/images/logo biyunge black.png" alt="Biyunge">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="Agora Building Materials">
-                </div>
-                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732244.png" alt="Tunas Muda School">
-                </div>
-                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="350">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111505.png" alt="Barista Corner">
-                </div>
-                
-                <!-- Row 4 -->
-                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Universal People">
-                </div>
-                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="OI Coffee & Eatery">
-                </div>
-                <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Quackey">
+                    <img src="./assets/images/logo agora.png" alt="Agora Building Materials">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="250">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Seantero Design">
+                    <img src="./assets/images/logo pondok 47.png" alt="Pondok-47">
                 </div>
             </div>
         </div>
@@ -1763,16 +1739,16 @@
                     
                     <div class="footer-social">
                         <a href="#" class="social-icon" aria-label="Instagram">
-                            <i>📷</i>
+                           <i class="fa-brands fa-instagram" style="color: #000000;"></i>
                         </a>
                         <a href="#" class="social-icon" aria-label="TikTok">
-                            <i>🎵</i>
+                            <i class="fa-brands fa-tiktok" style="color: #000000;"></i>
                         </a>
                         <a href="#" class="social-icon" aria-label="Facebook">
-                            <i>f</i>
+                           <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
                         </a>
                         <a href="#" class="social-icon" aria-label="YouTube">
-                            <i>▶</i>
+                            <i class="fa-brands fa-youtube" style="color: #000000;"></i>
                         </a>
                     </div>
                 </div>
