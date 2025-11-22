@@ -16,7 +16,7 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Brush+Script+MT&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/brushstrike" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fonts.css">
 
     <style>
         * {
@@ -35,8 +35,8 @@
         /* Navbar Styles */
         .navbar {
             padding: 1.5rem 0;
-  background: transparent;
-  transition: background 0.3s, backdrop-filter 0.3s;
+            background: transparent;
+            transition: background 0.3s, backdrop-filter 0.3s;
         }
 
         .navbar.open {
@@ -352,12 +352,19 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
+        .service-bg-text.middle {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         .service-bg-text.bottom {
             bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
         }
+
         
         .services-carousel-wrapper {
             position: relative;
@@ -436,7 +443,7 @@
             font-weight: 900;
             line-height: 1;
         }
-        
+
         .carousel-control-prev {
             left: -110px;
         }
@@ -1288,12 +1295,6 @@
         }
         
         @media (max-width: 1400px) and (min-width: 993px) {
-            .carousel-control-prev {
-                left: 10px;
-            }
-            .carousel-control-next {
-                right: 10px;
-            }
             
             #workCarousel .carousel-control-prev {
                 left: -50px;
@@ -1434,6 +1435,7 @@
     <!-- Services Section -->
     <section class="services-section" id="service">
         <div class="service-bg-text top">SERVICE</div>
+        <div class="service-bg-text middle">SERVICE</div>
         <div class="service-bg-text bottom">SERVICE</div>
         
         <div class="container">
